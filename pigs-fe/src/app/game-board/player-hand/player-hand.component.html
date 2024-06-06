@@ -1,0 +1,24 @@
+<div class="flex-row center-start player-hand" style="height: 120%">
+  <!-- player cards -->
+  <ng-container *ngFor="let card of server.player.cardsInHand; let i = index">
+    <app-card
+      class="card"
+      [style.margin-left.px]="i === 0 ? 0 : clacCardMargin()"
+      [style.zIndex]="i"
+      [style.transform]="
+        'translateY(' +
+        calcCardHeightOffset(i) +
+        '%) ' +
+        'rotate(' +
+        calcCardRotation(i) +
+        'deg)'
+      "
+      [number]="card.number"
+      [numberOfPoints]="card.points"
+      [ngClass]="{
+        'selected-card': i === selectedCardIndex && server.player.chosenCard
+      }"
+      (click)="selectCard(card, i)"
+    ></app-card>
+  </ng-container>
+</div>

@@ -1,0 +1,47 @@
+:host {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+
+    aspect-ratio: 15/16;
+
+
+}
+
+@media screen and (orientation: landscape) {
+
+    :host {
+        height: 100%;
+    }
+
+    :host {
+        font-size: 2vh;
+    }
+}
+
+@media screen and (orientation: portrait) {
+
+    :host {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    :host {
+        font-size: 2vw;
+    }
+}
+
+.selectable {
+    cursor: pointer;
+    background: radial-gradient(#ff000000, #35000054);
+    // border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+.selectable:hover {
+    background-color: #e0e0e044; /* Darken background color on hover */
+}

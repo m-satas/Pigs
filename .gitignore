@@ -1,0 +1,9 @@
+# Node.js in pigs-be directory
+pigs-be/node_modules/
+pigs-be/.env
+
+# Angular in pigs-fe directory
+pigs-fe/node_modules/
+pigs-fe/.angular
+pigs-fe/.vscode
+pigs-fe/src/environment

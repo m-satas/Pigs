@@ -1,0 +1,17 @@
+:host {
+    height: 100%;
+    aspect-ratio: 3/4;
+    
+    background-color: rgb(240, 240, 240);
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.number {
+    font-size: 260%;
+    color: white;
+    text-shadow: -1px -1px 0 black,  
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+}

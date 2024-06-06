@@ -1,0 +1,26 @@
+.points {
+    position: absolute;
+    font-size: 140%;
+}
+
+.text-border {
+    color: white;
+    text-shadow: -1px -1px 0 black,  
+                  1px -1px 0 black,
+                 -1px  1px 0 black,
+                  1px  1px 0 black;
+}
+
+@media screen and (orientation: landscape) {
+    .points {
+        top: 30%;
+        left: -50%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .points {
+        bottom: -10%;
+        left: -30%;
+    }
+}

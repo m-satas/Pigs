@@ -1,0 +1,80 @@
+<mat-dialog-content class="flex-col center-stretch">
+  <!-- logo / name -->
+  <div class="flex-col center-center" style="margin-bottom: 30px">
+    <!-- logo -->
+    <div style="width: 80px" class="flex-col center-center">
+      <app-pig-icon [stroke]="false" [crown]="true"></app-pig-icon>
+    </div>
+    <span
+      class="primary-color"
+      style="margin-top: 20px; font-size: 50px; font-weight: 400"
+      >PIGS</span
+    >
+  </div>
+
+  <!-- start / join game -->
+  <form
+    class="flex-col center-stretch"
+    (ngSubmit)="joinGame()"
+    #joinForm="ngForm"
+    style="margin-bottom: 10px"
+  >
+    <mat-form-field>
+      <mat-label>Room ID</mat-label>
+      <input
+        name="roomId"
+        maxlength="16"
+        required
+        matInput
+        type="text"
+        [(ngModel)]="roomId"
+        #roomIdInput="ngModel"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Nickname</mat-label>
+      <input
+        name="nickName"
+        maxlength="16"
+        required
+        matInput
+        type="text"
+        [(ngModel)]="playerName"
+        #playerNameInput="ngModel"
+      />
+    </mat-form-field>
+    <div *ngIf="error">{{ error }}</div>
+    <button
+      type="submit"
+      color="primary"
+      class="button-primary-color"
+      mat-raised-button
+      [disabled]="joinForm.invalid"
+    >
+      Start / Join room
+    </button>
+  </form>
+
+  <!-- rules / about -->
+  <div class="flex-col center-stretch">
+    <button
+      style="margin-bottom: 10px"
+      type="submit"
+      color="primary"
+      class="button-primary-color"
+      mat-raised-button
+      (click)="openRulesDialog()"
+    >
+      Rules
+    </button>
+    <button
+      type="submit"
+      color="primary"
+      class="button-primary-color"
+      mat-raised-button
+      (click)="openAbouDialog()"
+    >
+      About
+    </button>
+  </div>
+</mat-dialog-content>

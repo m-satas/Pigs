@@ -1,0 +1,37 @@
+<mat-dialog-content>
+  <table>
+    <thead>
+      <tr>
+        <th class="pig"></th>
+        <th class="name">Name</th>
+        <th class="score">Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of scores; let i = index">
+        <td class="pig">
+          <app-pig-icon
+            [crown]="i === 0"
+            style="width: 100%"
+            [mainColor]="this.server.playerColors.get(player.id) || ''"
+          ></app-pig-icon>
+        </td>
+        <td class="name">{{ player.name }}</td>
+        <td class="score">
+          <span *ngIf="player.score > 0">-</span>{{ player.score }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</mat-dialog-content>
+<mat-dialog-actions class="flex-row space-center">
+  <div class="flex-row start-center">
+    <button *ngIf="this.server.player.creator" mat-button (click)="continue()">
+      Continue
+    </button>
+    <button *ngIf="this.server.player.creator" mat-button (click)="newSeries()">
+      New series
+    </button>
+  </div>
+  <button mat-button (click)="leave()">Leave</button>
+</mat-dialog-actions>

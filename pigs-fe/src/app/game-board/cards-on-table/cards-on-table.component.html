@@ -1,0 +1,20 @@
+<div
+  style="margin-bottom: 5px; min-height: 22%; max-height: 22%"
+  *ngFor="let cardRow of this.server.gameState.cardsOnTable; let i = index"
+  class="grow-shrink flex-row start-center w100"
+  (click)="takeRow(i)"
+  [ngClass]="{
+    selectable:
+      server.gameState.gamePhase === takeRowPhase &&
+      server.gameState.waitingForPlayer === server.player.id
+  }"
+>
+  <ng-container *ngFor="let card of cardRow; let j = index">
+    <app-card
+      style="margin-right: 5px"
+      [number]="card.number"
+      [numberOfPoints]="card.points"
+      [highlightColor]="getCardHighlightColor(card.number)"
+    ></app-card>
+  </ng-container>
+</div>

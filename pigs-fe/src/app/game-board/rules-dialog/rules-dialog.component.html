@@ -1,0 +1,33 @@
+<mat-dialog-content>
+  <p style="font-weight: bold">Gameplay:</p>
+  <p>
+    Players simultaneously choose one card from their hand to play face-down.
+  </p>
+  <p>
+    Once all players have chosen a card, reveal them simultaneously. Starting
+    with the player who played the lowest card (in numerical order), each player
+    places their card onto one of the four rows on the table. The card must be
+    placed in the row with the highest card that is lower than the card being
+    played.
+  </p>
+  <p>
+    If a player's card would be the sixth card in a row (thus causing them to
+    take the row), they must take the row and all the cards in it. The player's
+    card becomes the start of a new row.
+  </p>
+  <p style="font-weight: bold">Scoring:</p>
+  <p>
+    Each bullhead card (cards with numbers) taken by a player counts as negative
+    points. The player with the fewest bullheads at the end of the game wins.
+  </p>
+  <button
+    style="margin-bottom: 10px"
+    type="submit"
+    color="primary"
+    class="button-primary-color"
+    mat-raised-button
+    (click)="this.dialogRef.close()"
+  >
+    Got it!
+  </button>
+</mat-dialog-content>

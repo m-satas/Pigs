@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+}
+
+.flex-row {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.grow-noshrink {
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.grow-shrink {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.nogrow-noshrink {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.start-start {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.start-center {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.start-end {
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.start-stretch {
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.center-start {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.center-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.center-end {
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.center-stretch {
+    justify-content: center;
+    align-items: stretch;
+}
+
+.end-start {
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.end-center {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.end-end {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
+.end-stretch {
+    justify-content: flex-end;
+    align-items: stretch;
+}
+
+.space-start {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.space-center {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.space-end {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.space-stretch {
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.h100 {
+    height: 100% !important;
+}
+
+.w100 {
+    width: 100% !important;
+}
+
+.button-primary-color:not(:disabled) {
+    background-color: #1c7b91 !important;
+}
+
+.primary-color {
+    color: #1c7b91 !important;
+}
+
+.card-font {
+    font-family: "Yatra One", system-ui !important;
+}
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: "Yatra One", system-ui;
+    overscroll-behavior-y: contain;
+}

@@ -1,0 +1,23 @@
+:host {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(15px) !important;
+}
+
+.selected-card {
+    transform: translateY(15px) !important;
+    border: 3px solid blue;
+}
+
+.player-hand {
+    padding-left: 10px;
+    padding-right: 10px;
+}
