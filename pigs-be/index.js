@@ -9,11 +9,8 @@ const app = express();
 const server = createServer(app);
 const gameServer = new GameServer(server);
 
-// const HOST = process.env.SERVER_HOST || 'localhost';
-// const PORT = process.env.SERVER_PORT || 3000;
-
-const HOST = '192.168.0.87';
-const PORT = 3000;
+const HOST = process.env.SERVER_HOST || 'localhost';
+const PORT = process.env.SERVER_PORT || 3000;
 
 server.listen(PORT, HOST, () => {
   console.log(`Server running at http://${HOST}:${PORT}`);
